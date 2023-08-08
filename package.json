@@ -22,4 +22,7 @@
     "url": "https://github.com/CamiloGdev/curso-Node-midudev/issues"
   },
   "homepage": "https://github.com/CamiloGdev/curso-Node-midudev#readme",
+  "dependencies": {
+    "picocolors": "1.0.0"
+  }
 }
