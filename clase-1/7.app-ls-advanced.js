@@ -1,3 +1,7 @@
+// mejorando la app ls, complementando con metodo process para leer la carpeta que queremos revisar sucontenido
+// usando modulo path para generar las rutas
+// usando modulo picocolors para mejorar la apariencia del resultado
+
 const fs = require('node:fs/promises')
 const path = require('node:path')
 const pc = require('picocolors')
