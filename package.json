@@ -1,0 +1,25 @@
+{
+  "name": "curso-node-midudev",
+  "version": "1.0.0",
+  "description": "curso gratuito de node por midudev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CamiloGdev/curso-Node-midudev.git"
+  },
+  "keywords": [
+    "curso",
+    "node",
+    "nodejs",
+    "midudev"
+  ],
+  "author": "Camilo Galeano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CamiloGdev/curso-Node-midudev/issues"
+  },
+  "homepage": "https://github.com/CamiloGdev/curso-Node-midudev#readme",
+}
