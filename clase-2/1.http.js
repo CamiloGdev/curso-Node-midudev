@@ -27,7 +27,7 @@ const processRequest = (req, res) => {
     res.statusCode = 200
     res.end('<h1>Contacto<h1/>')
   } else {
-    res.statusCode = 400
+    res.statusCode = 404
     res.end('<h1>404<h1/>')
   }
 }
