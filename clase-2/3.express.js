@@ -7,7 +7,7 @@ const PORT = process.env.PORT ?? 3000
 
 app.disable('x-powered-by') // <-- desactivación de cabecera para no enviar la herramienta con la que se esta trabajando
 
-// Middelware para todas las peticiones que entren
+/* // Middelware para todas las peticiones que entren
 app.use((req, res, next) => {
   // podriamos trackear la request a la base de datos
   // revisar si el usuario tiene cookies
@@ -30,7 +30,10 @@ app.use((req, res, next) => {
     req.body = data
     next()
   })
-})
+}) */
+
+// express nos brinda un middelware que nos ahorra el codigo anterior y hace exactamente lo mismo
+app.use(express.json())
 
 // con express en lugar de definir una funcion que procesa las request, contamos con metodos indendientes basados en los diferentes metodos HTTP
 app.get('/pokemon/ditto', (req, res) => {
@@ -38,6 +41,7 @@ app.get('/pokemon/ditto', (req, res) => {
 })
 
 app.post('/pokemon', (req, res) => {
+  req.body.timestamp = Date.now()
   // aca podriamos guardar en DB con el req.body
   res.status(201).json(req.body)
 })
