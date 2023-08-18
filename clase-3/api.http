@@ -7,3 +7,38 @@ GET http://localhost:3000/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
 ### Recuperar películas por géneros
 GET http://localhost:3000/movies?genre=ACTION
 
+### Crear una pelicula con POST (crear todo el recurso desde cero)
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "sql": "SELECT * FROM users",
+  "title": "The Goodfather",
+  "year": 1975,
+  "director": "Francis Ford Coppola",
+  "duration": 175,
+  "poster": "https://img.fruugo.com/product/4/49/14441494_max.jpg",
+  "genre": [
+    "Crime",
+    "Drama"
+  ]
+}
+
+### Provocando errores en la creacion del recurso movie
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": 1,
+  "year": "cualquier baina"
+}
+
+### Modificar o actualizar solo alguna parte de una movie
+PATCH http://localhost:3000/movie/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "id": "kdfjiaefhk",
+  "year": 1993,
+  "title": "Hola"
+}
