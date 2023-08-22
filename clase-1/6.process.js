@@ -6,6 +6,6 @@
 console.log(process.argv)
 
 // recuperar la ruta del directorio desde el cual se esta haciendo la ejecución
-// no es donde esta el archivo, es desde donde estamos ejecutandolo
+// no es donde esta el archivo, es desde donde estamos ejecutándolo
 // current working directory
 console.log(process.cwd())

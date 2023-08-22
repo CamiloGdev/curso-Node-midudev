@@ -1,4 +1,4 @@
-// mejorando la app ls, complementando con metodo process para leer la carpeta que queremos revisar sucontenido
+// mejorando la app ls, complementando con método process para leer la carpeta que queremos revisar su contenido
 // usando modulo path para generar las rutas
 // usando modulo picocolors para mejorar la apariencia del resultado
 

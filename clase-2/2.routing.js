@@ -1,4 +1,4 @@
-// procesando peticiones con diferentes metodos http
+// procesando peticiones con diferentes métodos http
 const http = require('node:http')
 const dittoJSON = require('./pokemon/ditto.json') // <-- gracias al uso de CommonJS podemos importar los JSON directamente sin convertir
 
@@ -24,18 +24,18 @@ function processRequest(req, res) {
 
           // Escuchar el evento data de la request
           req.on('data', (chunk) => {
-            body += chunk.toString() // <-- chunk quiere desit troso, para cada troso que llega del cuerpo de la request lo tranformamos en string y lo vamos guardando en body
+            body += chunk.toString() // <-- chunk quiere decir trozo, para cada trozo que llega del cuerpo de la request lo transformamos en string y lo vamos guardando en body
           })
 
           req.on('end', () => {
             const data = JSON.parse(body)
-            // aca podriamos llamar a la base de datos para procezar data
+            // aca podríamos llamar a la base de datos para procesar data
             res.writeHead(201, {
               // <-- otra forma de enviar la cabecera con el status code directamente
               'Content-Type': 'application/json; charset=utf-8',
             })
             data.timestamp = Date.now()
-            res.end(JSON.stringify(data)) // <-- para este caso de ejemplo retormanos la misma data suministrada
+            res.end(JSON.stringify(data)) // <-- para este caso de ejemplo retornamos la misma data suministrada
           })
 
           break

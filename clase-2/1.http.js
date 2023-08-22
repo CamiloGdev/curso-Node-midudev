@@ -1,15 +1,15 @@
-// creando un servidor y prosezando requests
+// creando un servidor y procesando requests
 const http = require('node:http')
 const fs = require('node:fs')
 
 const desiredPort = process.env.PORT ?? 3000 // <-- tomamos el puerto desde las variables de entorno
 
-// definimos el callback que proceza la petición externamente
+// definimos el callback que procesa la petición externamente
 const processRequest = (req, res) => {
   res.setHeader('Content-Type', 'text/html; charset=utf-8') // <-- definición de cabeceras como tipo de respuesta y el charset para detectar correctamente los caracteres, etc...
 
   if (req.url === '/') {
-    // <-- respuesta al request raiz "/"
+    // <-- respuesta al request raíz "/"
     res.statusCode = 200
     res.end('<h1>Bienvenido a mi página de inicio<h1/>')
   } else if (req.url === '/super-imagen.png') {
@@ -23,7 +23,7 @@ const processRequest = (req, res) => {
       }
     })
   } else if (req.url === '/contacto') {
-    // <-- respuesta al request raiz "/"
+    // <-- respuesta al request raíz "/"
     res.statusCode = 200
     res.end('<h1>Contacto<h1/>')
   } else {

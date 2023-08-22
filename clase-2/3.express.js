@@ -9,13 +9,13 @@ app.disable('x-powered-by') // <-- desactivación de cabecera para no enviar la 
 
 /* // Middelware para todas las peticiones que entren
 app.use((req, res, next) => {
-  // podriamos trackear la request a la base de datos
+  // podríamos trackear la request a la base de datos
   // revisar si el usuario tiene cookies
-  // por ekemplo podemos traernos la logica que toma el cuerpo de la request y la almacena como JSON en una variable
+  // por ejemplo podemos traernos la lógica que toma el cuerpo de la request y la almacena como JSON en una variable
   if (req.method !== 'POST') return next()
   if (req.headers['content-type'] !== 'application/json') return next()
 
-  // aca solo llegan request que son POST y que tineen el header Content-Type: application/json
+  // aca solo llegan request que son POST y que tienen el header Content-Type: application/json
   let body = ''
 
   // Escuchar el evento data de la request
@@ -26,27 +26,27 @@ app.use((req, res, next) => {
   req.on('end', () => {
     const data = JSON.parse(body)
     data.timestamp = Date.now()
-    // mutar la request y meter la informacion parseada en el req.body
+    // mutar la request y meter la información parseada en el req.body
     req.body = data
     next()
   })
 }) */
 
-// express nos brinda un middelware que nos ahorra el codigo anterior y hace exactamente lo mismo
+// express nos brinda un middelware que nos ahorra el código anterior y hace exactamente lo mismo
 app.use(express.json())
 
-// con express en lugar de definir una funcion que procesa las request, contamos con metodos indendientes basados en los diferentes metodos HTTP
+// con express en lugar de definir una función que procesa las request, contamos con métodos independientes basados en los diferentes métodos HTTP
 app.get('/pokemon/ditto', (req, res) => {
   res.status(200).json(dittoJSON) // <-- con express la res tiene una funcionalidad mas especial
 })
 
 app.post('/pokemon', (req, res) => {
   req.body.timestamp = Date.now()
-  // aca podriamos guardar en DB con el req.body
+  // aca podríamos guardar en DB con el req.body
   res.status(201).json(req.body)
 })
 
-// para manejar los errores en la petición establecemos un tratamiento global de las request, pero al final para garantizar si ya se ha dado una peticion establecida
+// para manejar los errores en la petición establecemos un tratamiento global de las request, pero al final para garantizar si ya se ha dado una petición establecida
 app.use((req, res) => {
   res.status(404).send('<h1>404<h1/>')
 })

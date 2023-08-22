@@ -1,4 +1,4 @@
-//CommonJS require module
+// CommonJS require module
 const sum = require('./sum');
 const { sub } = require('./sub');
 

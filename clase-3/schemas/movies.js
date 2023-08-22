@@ -33,12 +33,12 @@ const movieSchema = z.object({
   ),
 })
 
-// Validamos todos los atrubutos del recurso
+// Validamos todos los atributos del recurso
 function validateMovie(input) {
   return movieSchema.safeParse(input)
 }
 
-// Agregando el metodo partial() a la validación, la realizamos parcialmente, cada validación se convierte en opcional, ya que solo nos pasaran algunos de los atrubutos cuando queramos por ejemplo actualizar parcialmente el recurso
+// Agregando el método partial() a la validación, la realizamos parcialmente, cada validación se convierte en opcional, ya que solo nos pasaran algunos de los atributos cuando queramos por ejemplo actualizar parcialmente el recurso
 function validatePartialMovie(input) {
   return movieSchema.partial().safeParse(input)
 }

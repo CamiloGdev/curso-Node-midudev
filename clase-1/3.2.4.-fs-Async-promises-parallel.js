@@ -1,4 +1,4 @@
-// uso del readFile del modulo fs de forma Asincrona con Async await
+// uso del readFile del modulo fs de forma Asíncrona con Async await
 const fs = require('node:fs/promises')
 
 Promise.all([

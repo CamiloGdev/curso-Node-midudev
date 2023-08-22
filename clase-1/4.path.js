@@ -2,7 +2,7 @@
 
 const path = require('node:path')
 
-// Obtener la barra separadora de rutas segun OS
+// Obtener la barra separadora de rutas según OS
 console.log(path.sep)
 
 // Uniendo rutas con path.join

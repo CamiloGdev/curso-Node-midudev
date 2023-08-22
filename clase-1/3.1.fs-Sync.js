@@ -7,7 +7,7 @@ const text = fs.readFileSync('./archivo.txt', 'utf-8') // se debe codificar para
 
 console.log(text)
 
-console.log('hacer cosas mientras lee el archivo ...') // <---- esto lo muestra despues de mostrar el contenido del archovo y no mientras lo esta leyendo ya que la lectura la hace de forma sincrona, por lo que la ejecucion no continua a la siguiente instrucción hata que no termine la lectura
+console.log('hacer cosas mientras lee el archivo ...') // <---- esto lo muestra después de mostrar el contenido del archivo y no mientras lo esta leyendo ya que la lectura la hace de forma sincrona, por lo que la ejecución no continua a la siguiente instrucción hasta que no termine la lectura
 
 console.log('leyendo el segundo archivo ...')
 const secondTex = fs.readFileSync('./archivo2.txt', 'utf-8')

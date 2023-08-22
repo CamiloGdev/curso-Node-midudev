@@ -9,7 +9,7 @@ const app = express()
 app.use(express.json())
 app.disable('x-powered-by')
 
-// Middelware para soluvionar los errores de cors
+// Middelware para solucionar los errores de cors
 app.use(
   cors({
     origin: (origin, callback) => {
@@ -28,7 +28,7 @@ app.use(
   })
 )
 
-// Todos los recursos que sean MOVIES se indentifican con /movies
+// Todos los recursos que sean MOVIES se identifican con /movies
 
 // OBTENER TODAS LA MOVIES
 // CON OPCIÓN DE FILTRAR POR GENRE
@@ -59,13 +59,13 @@ app.post('/movies', (req, res) => {
   const result = validateMovie(req.body)
 
   if (result.error) {
-    // <-- tambien podemos verificar el parametro contrario con (!result.success)
-    return res.status(400).json({ error: JSON.parse(result.error.message) }) // <-- tambien podria usarse el codigo 422 (Unprocessable Entity)
+    // <-- también podemos verificar el parámetro contrario con (!result.success)
+    return res.status(400).json({ error: JSON.parse(result.error.message) }) // <-- también podría usarse el código 422 (Unprocessable Entity)
   }
 
   // Esto se debe hacer en DB
   const newMovie = {
-    id: crypto.randomUUID(), // <-- generamos un uuid v4 usando el modulo nataivo crypto
+    id: crypto.randomUUID(), // <-- generamos un uuid v4 usando el modulo nativo crypto
     ...result.data,
   }
 

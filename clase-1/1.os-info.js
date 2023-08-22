@@ -1,4 +1,4 @@
-// uso de modulos nativos de NodeJS con CommonJS
+// uso de módulos nativos de NodeJS con CommonJS
 
 // modulo que nos brinda información del OS
 const os = require('node:os')
