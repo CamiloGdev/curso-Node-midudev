@@ -1,6 +1,6 @@
 // creamos un esquema con zod para la validación de los datos para las movies
 
-const z = require('zod') // <-- paquete para realizar validaciones
+import z from 'zod' // <-- paquete para realizar validaciones
 
 const movieSchema = z.object({
   title: z.string({
@@ -34,15 +34,11 @@ const movieSchema = z.object({
 })
 
 // Validamos todos los atributos del recurso
-function validateMovie(input) {
+export function validateMovie(input) {
   return movieSchema.safeParse(input)
 }
 
 // Agregando el método partial() a la validación, la realizamos parcialmente, cada validación se convierte en opcional, ya que solo nos pasaran algunos de los atributos cuando queramos por ejemplo actualizar parcialmente el recurso
-function validatePartialMovie(input) {
+export function validatePartialMovie(input) {
   return movieSchema.partial().safeParse(input)
-}
-module.exports = {
-  validateMovie,
-  validatePartialMovie,
 }

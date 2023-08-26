@@ -1,9 +1,9 @@
-const express = require('express')
-const crypto = require('node:crypto')
-const cors = require('cors')
+import express from 'express'
+import { randomUUID } from 'node:crypto'
+import cors from 'cors'
+import { validateMovie, validatePartialMovie } from './schemas/movies.js'
 
-const movies = require('./movies.json')
-const { validateMovie, validatePartialMovie } = require('./schemas/movies.js')
+import movies from './movies.json'
 
 const app = express()
 app.use(express.json())
@@ -65,7 +65,7 @@ app.post('/movies', (req, res) => {
 
   // Esto se debe hacer en DB
   const newMovie = {
-    id: crypto.randomUUID(), // <-- generamos un uuid v4 usando el modulo nativo crypto
+    id: randomUUID(), // <-- generamos un uuid v4 usando el modulo nativo crypto
     ...result.data,
   }
 
