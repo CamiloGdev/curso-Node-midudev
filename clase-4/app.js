@@ -3,7 +3,8 @@ import { randomUUID } from 'node:crypto'
 import cors from 'cors'
 import { validateMovie, validatePartialMovie } from './schemas/movies.js'
 
-import movies from './movies.json'
+import { readJSON } from './utils.js' // <-- importamos el modulo  que creamos para leer los json como si hicieramos un requiere
+const movies = readJSON('./movies.json') // usando el reasJSON importado ahora si podemos importar directamente nuestro json como si usaramos CommonJS
 
 const app = express()
 app.use(express.json())
