@@ -1,6 +1,6 @@
 import express from 'express'
 import { randomUUID } from 'node:crypto'
-import cors from 'cors'
+import { corsMiddleware } from './middlewares/cors.js'
 import { validateMovie, validatePartialMovie } from './schemas/movies.js'
 
 import { readJSON } from './utils.js' // <-- importamos el modulo  que creamos para leer los json como si hicieramos un requiere
@@ -11,23 +11,7 @@ app.use(express.json())
 app.disable('x-powered-by')
 
 // Middelware para solucionar los errores de cors
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      const ACEPTED_ORIGINS = [
-        'http://localhost:8080',
-        'http://movies.com',
-        'http://camilo.dev',
-      ]
-
-      if (ACEPTED_ORIGINS.includes(origin) || !origin) {
-        return callback(null, true)
-      }
-
-      return callback(new Error('Not allowed by CORS'))
-    },
-  })
-)
+app.use(corsMiddleware())
 
 // Todos los recursos que sean MOVIES se identifican con /movies
 
