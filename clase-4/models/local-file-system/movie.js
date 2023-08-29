@@ -1,4 +1,3 @@
-// contraseña mongo db: j0gJr9nN5hPAtMbe
 // con el modelo movie realizamos el manejo interno de los datos, las reglas del negocio
 
 import { randomUUID } from 'node:crypto'
@@ -28,7 +27,7 @@ export class MovieModel {
   }
 
   // CREAR UNA NUEVA MOVIE
-  static createMovie({ input }) {
+  static create({ input }) {
     // Esto se debe hacer en DB
     const newMovie = {
       id: randomUUID(), // <-- generamos un uuid v4 usando el modulo nativo crypto
@@ -41,7 +40,7 @@ export class MovieModel {
   }
 
   // ELIMINAR UNA MOVIE
-  static deleteMovie({ id }) {
+  static delete({ id }) {
     const movieIndex = movies.findIndex((movie) => movie.id === id)
 
     if (movieIndex === -1) {
@@ -54,7 +53,7 @@ export class MovieModel {
   }
 
   // ACTUALIZAR PARCIALMENTE UNA MOVIE
-  static updateMovie({ id, input }) {
+  static update({ id, input }) {
     const movieIndex = movies.findIndex((movie) => movie.id === id)
     if (movieIndex === -1) {
       return false

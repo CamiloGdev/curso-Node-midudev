@@ -1,5 +1,5 @@
 import { validateMovie, validatePartialMovie } from '../schemas/movies.js'
-import { MovieModel } from '../models/local-file-system/movie.js'
+import { MovieModel } from '../models/database/movie.js'
 
 export class MovieController {
   // OBTENER TODAS LA MOVIES
@@ -30,7 +30,7 @@ export class MovieController {
       return res.status(400).json({ error: JSON.parse(result.error.message) }) // <-- también podría usarse el código 422 (Unprocessable Entity)
     }
 
-    const newMovie = await MovieModel.createMovie({ input: result.data })
+    const newMovie = await MovieModel.create({ input: result.data })
 
     return res.status(201).json(newMovie)
   }
@@ -38,7 +38,7 @@ export class MovieController {
   // ELIMINAR UNA MOVIE
   static async delete(req, res) {
     const { id } = req.params
-    const deletedMovie = await MovieModel.deleteMovie({ id })
+    const deletedMovie = await MovieModel.delete({ id })
 
     if (deletedMovie === false) {
       return res.status(404).json({ error: 'Movie not found' })
@@ -56,7 +56,7 @@ export class MovieController {
     }
 
     const { id } = req.params
-    const updatedMovie = await MovieModel.updateMovie({
+    const updatedMovie = await MovieModel.update({
       id,
       input: result.data,
     })
