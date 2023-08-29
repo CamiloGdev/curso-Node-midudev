@@ -34,7 +34,7 @@ Content-Type: application/json
 }
 
 ### Modificar o actualizar solo alguna parte de una movie
-PATCH http://localhost:3000/movie/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+PATCH http://localhost:3000/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
 Content-Type: application/json
 
 {
