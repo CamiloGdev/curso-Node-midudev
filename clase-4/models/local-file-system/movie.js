@@ -1,8 +1,9 @@
+// contraseña mongo db: j0gJr9nN5hPAtMbe
 // con el modelo movie realizamos el manejo interno de los datos, las reglas del negocio
 
 import { randomUUID } from 'node:crypto'
 
-import { readJSON } from '../utils.js' // <-- importamos el modulo  que creamos para leer los json como si hicieramos un requiere
+import { readJSON } from '../../utils.js' // <-- importamos el modulo  que creamos para leer los json como si hicieramos un requiere
 const movies = readJSON('./movies.json') // usando el reasJSON importado ahora si podemos importar directamente nuestro json como si usaramos CommonJS
 
 export class MovieModel {
