@@ -1,14 +1,14 @@
-# Ejercicios y proyectos prácticos con Node y Express
+# Ejercicios y proyectos prácticos con ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) y ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
 ## 1- conceptos básicos de Node y express
-  * Uso de modulo nativo de Node 'os'.
-  * Uso de statSync del modulo nativo de Node file-sistem 'fs', para obtener data de los ficheros de forma sincrona.
-  * Uso de readFileSync del modulo nativo de Node file-sistem 'fs', para lectura de archivos de forma sincrona.
-  * Uso de readFile del modulo nativo de Node file-sistem 'fs', para lectura de archivos de forma asíncrona con callbacks.
-  * Uso de readFile del modulo nativo de Node file-sistem 'fs/promises', para lectura de archivos de forma asíncrona con promises.
-  * Uso de readFile del modulo nativo de Node file-sistem 'fs/promises', para lectura de archivos de forma asíncrona con async-await.
-  * Uso de readFile del modulo nativo de Node file-sistem 'fs/promises', para lectura de archivos de forma asíncrona y paralela con promises.
-  * Uso de readFile del modulo nativo de Node file-sistem 'fs/promises', para lectura de archivos de forma asíncrona y paralela con async-await.
+  * Uso de modulo nativo de Node `os`.
+  * Uso de statSync del modulo nativo de Node file-system 'fs', para obtener data de los ficheros de forma sincrona.
+  * Uso de readFileSync del modulo nativo de Node file-system 'fs', para lectura de archivos de forma sincrona.
+  * Uso de readFile del modulo nativo de Node file-system 'fs', para lectura de archivos de forma asíncrona con callbacks.
+  * Uso de readFile del modulo nativo de Node file-system 'fs/promises', para lectura de archivos de forma asíncrona con promises.
+  * Uso de readFile del modulo nativo de Node file-system 'fs/promises', para lectura de archivos de forma asíncrona con async-await.
+  * Uso de readFile del modulo nativo de Node file-system 'fs/promises', para lectura de archivos de forma asíncrona y paralela con promises.
+  * Uso de readFile del modulo nativo de Node file-system 'fs/promises', para lectura de archivos de forma asíncrona y paralela con async-await.
   * Uso de del modulo nativo de Node 'path' para trabajo con rutas de ficheros.
   * Pequeña app ls que lee el contenido del la carpeta actual y los muestra por consola
   * Uso del método process, para recuperar la ruta del directorio desde el cual se esta haciendo la ejecución (current working directory)
@@ -28,7 +28,7 @@
   * Creación de un schema de validaciones para las peticiones usando el modulo 'zod'
   * Creación de una pequeña landing para consumir la API, para probar su funcionamiento y el uso de los cors
 
-## 4- refactorizando la API de películas, implementación de MVC architecture, integración con MongoDB
+## 4- refactorizando la API de películas, implementación de MVC architecture, integración con ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
   * Modularización de la API siguiendo la arquitectura MVC
   * Implementación de enrutador, encargado exclusivamente del manejo de las rutas
   * Implementación de controlador encargado de la validación y gestión de las peticiones
