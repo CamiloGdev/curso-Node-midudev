@@ -2,7 +2,7 @@
 // pero haciendo uso del modulo creado para devolver un puerto libre
 const http = require('node:http')
 const { findAvailablePort } = require('./9.free-port.js')
-const desiredPort = process.env.PORT ?? 300 // <-- tomamos el puerto desde las variables de entorno
+const desiredPort = process.env.PORT ?? 3000 // <-- tomamos el puerto desde las variables de entorno
 
 const server = http.createServer((req, res) => {
   console.log('request received')

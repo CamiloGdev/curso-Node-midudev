@@ -1,8 +1,8 @@
 // uso del readFile del modulo fs de forma Sincrona
 const fs = require('node:fs')
 
-console.log('leyendo el primer archvo ...')
-// const text = fs.readFileSync('./archivo.txt') <-- esto devuelve un buffer de memoria binari
+console.log('leyendo el primer archivo ...')
+// const text = fs.readFileSync('./archivo.txt') <-- esto devuelve un buffer de memoria binaria
 const text = fs.readFileSync('./archivo.txt', 'utf-8') // se debe codificar para poder hacer uso de el
 
 console.log(text)

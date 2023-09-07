@@ -6,7 +6,7 @@ const fs = require('node:fs/promises')
 const path = require('node:path')
 const pc = require('picocolors')
 
-const folder = process.argv[2] ?? '.' // <--- tomamos el primer argumento como la ruta a proczar
+const folder = process.argv[2] ?? '.' // <--- tomamos el primer argumento como la ruta a procesar
 
 async function ls(folder) {
   let files

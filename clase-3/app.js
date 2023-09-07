@@ -9,17 +9,17 @@ const app = express()
 app.use(express.json())
 app.disable('x-powered-by')
 
-// Middelware para solucionar los errores de cors
+// Middleware para solucionar los errores de cors
 app.use(
   cors({
     origin: (origin, callback) => {
-      const ACEPTED_ORIGINS = [
+      const ACCEPTED_ORIGINS = [
         'http://localhost:8080',
         'http://movies.com',
         'http://camilo.dev',
       ]
 
-      if (ACEPTED_ORIGINS.includes(origin) || !origin) {
+      if (ACCEPTED_ORIGINS.includes(origin) || !origin) {
         return callback(null, true)
       }
 

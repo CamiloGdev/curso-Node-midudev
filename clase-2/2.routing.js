@@ -9,7 +9,7 @@ function processRequest(req, res) {
       switch (url) {
         case '/pokemon/ditto':
           res.setHeader('Content-Type', 'application/json; charset=utf-8')
-          return res.end(JSON.stringify(dittoJSON)) // <-- se deve convertir el JSON a string para enviarlo
+          return res.end(JSON.stringify(dittoJSON)) // <-- se debe convertir el JSON a string para enviarlo
 
         default:
           res.statusCode = 404

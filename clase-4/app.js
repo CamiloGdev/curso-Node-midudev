@@ -6,7 +6,7 @@ const app = express()
 app.use(express.json())
 app.disable('x-powered-by')
 
-// Middelware para solucionar los errores de cors
+// Middleware para solucionar los errores de cors
 app.use(corsMiddleware())
 
 // Todos los recursos que sean MOVIES se identifican con /movies

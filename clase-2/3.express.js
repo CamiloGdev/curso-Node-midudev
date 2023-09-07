@@ -7,7 +7,7 @@ const PORT = process.env.PORT ?? 3000
 
 app.disable('x-powered-by') // <-- desactivación de cabecera para no enviar la herramienta con la que se esta trabajando
 
-/* // Middelware para todas las peticiones que entren
+/* // Middleware para todas las peticiones que entren
 app.use((req, res, next) => {
   // podríamos trackear la request a la base de datos
   // revisar si el usuario tiene cookies
@@ -32,7 +32,7 @@ app.use((req, res, next) => {
   })
 }) */
 
-// express nos brinda un middelware que nos ahorra el código anterior y hace exactamente lo mismo
+// express nos brinda un middleware que nos ahorra el código anterior y hace exactamente lo mismo
 app.use(express.json())
 
 // con express en lugar de definir una función que procesa las request, contamos con métodos independientes basados en los diferentes métodos HTTP

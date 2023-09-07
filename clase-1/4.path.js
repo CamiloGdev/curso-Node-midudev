@@ -15,5 +15,5 @@ console.log(base)
 const filename = path.basename('/tmp/midu-secret-files/password.txt', '.txt')
 console.log(filename)
 
-const extencion = path.extname('my.super.image.jpg')
-console.log(extencion)
+const extension = path.extname('my.super.image.jpg')
+console.log(extension)

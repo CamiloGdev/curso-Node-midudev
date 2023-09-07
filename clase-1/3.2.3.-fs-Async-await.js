@@ -4,7 +4,7 @@ const fs = require('node:fs/promises')
 ;(async () => {
   // <--- al trabajar con CommonJS es necesario englobar el código en una función auto invocada (IIFE Inmediatly Invoked Function Expression) de tipo async para que el await funcione
 
-  console.log('leyendo el primer archvo ...')
+  console.log('leyendo el primer archivo ...')
   const text = await fs.readFile('./archivo.txt', 'utf-8')
   console.log('termine de leer el archivo y te lo muestro: ', text)
 

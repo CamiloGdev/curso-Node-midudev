@@ -2,8 +2,8 @@
 
 import { randomUUID } from 'node:crypto'
 
-import { readJSON } from '../../utils.js' // <-- importamos el modulo  que creamos para leer los json como si hicieramos un requiere
-const movies = readJSON('./movies.json') // usando el reasJSON importado ahora si podemos importar directamente nuestro json como si usaramos CommonJS
+import { readJSON } from '../../utils.js' // <-- importamos el modulo  que creamos para leer los json como si hiciéramos un requiere
+const movies = readJSON('./movies.json') // usando el reasJSON importado ahora si podemos importar directamente nuestro json como si usáramos CommonJS
 
 export class MovieModel {
   // OBTENER TODAS LA MOVIES

@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
 
 // indicamos al servidor en que puerto debe escuchar
 server.listen(0, () => {
-  // <- pasamos un colback para indicar por consola cuando el servidor comience a escuchar
+  // <- pasamos un callback para indicar por consola cuando el servidor comience a escuchar
   console.log(
     `server listening on port http://localhost:${server.address().port}`
   )

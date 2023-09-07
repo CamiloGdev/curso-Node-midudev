@@ -1,4 +1,4 @@
-// con este enrrutador direccionaremos todas las peticiones a las rutas que empiecen con ../movies
+// con este enrutador direccionamos todas las peticiones a las rutas que empiecen con ../movies
 
 import { Router } from 'express'
 import { MovieController } from '../controllers/movies.js'
